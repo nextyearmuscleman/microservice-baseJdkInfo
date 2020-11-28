@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <groupId>cn.study.microservice</groupId>
+    <artifactId>microservice-root</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <modules>
+        <module>microservice-movie-provider</module>
+        <module>microservice-movie-consumer</module>
+        <module>microservice-discovery-eureka</module>
+        <module>microservice-discovery-eureka-double</module>
+        <module>microservice-movie-consumer-ribbon</module>
+        <module>microservice-movie-consumer-feign</module>
+        <module>microservice-consumer-hystrix</module>
+        <module>microservice-gateway-zuul</module>
+        <module>microservice-config</module>
+        <module>java-study-notes</module>
+    </modules>
+
+</project>

@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  jpa:
+# 让hibernate打印执行的SQL
+    show-sql: true
+  application:
+    name: microservice-movie-provider
+
+logging:
+  level:
+    root: INFO
+# 配置日志级别，让hibernate打印出执行的SQL参数
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+
+eureka:
+  client:
+    service-url:
+      # 指定eureka server通信地址，注意/eureka/小尾巴不能少
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    # 是否注册IP到eureka server，如不指定或设为false，那就会注册主机名到eureka server
+    prefer-ip-address: true

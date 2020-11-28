@@ -1,0 +1,7 @@
+
+
+
+#Feign启用/禁用Hystrix
+feign:
+  hystrix:
+    enabled: true
