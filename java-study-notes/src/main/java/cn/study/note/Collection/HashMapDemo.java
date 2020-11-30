@@ -43,4 +43,8 @@ public class HashMapDemo {
      *      2.4- HashTable                      不允许null    不允许null      [non-thread-safe]
      */
 
+    /**
+     * 3- HashMap的put方法会自动排序，有时反倒会影响业务逻辑，可以使用LinkedHashMap能够保留添加元素的顺序
+     */
+
 }
