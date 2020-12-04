@@ -5,3 +5,5 @@
    这样的返回结果是有问题的。分页的数值不一样导致总数不一样
    * 第二个解决方法： 【ok】 考虑在mysql层名解决，由于盘查总数字段是根据三个字段求和得出的，所以在where语句是无法通过 >0去过滤的，
    后来想到 关键字Having的执行顺序在where后面，可以实现二次过滤。fix
+   * 二方法有个坑，就是having执行顺序需要在ORDER BY之前, 否则语法错误。
+   * `select / where / group by / having / order by`
