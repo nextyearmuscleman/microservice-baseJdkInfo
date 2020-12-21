@@ -6,6 +6,9 @@ import java.util.concurrent.*;
  * @author jixuelei
  * @date 2020/12/21
  */
+/**
+ * 创建新线程的三种方式
+ */
 public class BaseThread {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -14,9 +17,7 @@ public class BaseThread {
         createThreadByFutureTask();
     }
 
-    /**
-     * 创建新现场的三种方式
-     */
+
 
     // 1- extends Thread ,由于java不支持多继承，因此不推荐。
     static void createThreadByExtendsThread() {
