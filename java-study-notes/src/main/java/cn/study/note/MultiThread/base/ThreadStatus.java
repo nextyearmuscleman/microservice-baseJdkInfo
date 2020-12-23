@@ -1,4 +1,4 @@
-package cn.study.note.MultiThread;
+package cn.study.note.MultiThread.base;
 
 /**
  * @author jixuelei

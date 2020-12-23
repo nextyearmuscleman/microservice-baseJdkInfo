@@ -1,11 +1,9 @@
-package cn.study.note.MultiThread;
+package cn.study.note.MultiThread.middle;
 
 /**
  * @author jixuelei
  * @date 2020/12/21
  */
-
-import java.util.concurrent.Callable;
 
 /**
  * synchronized学习

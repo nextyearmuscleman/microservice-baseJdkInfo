@@ -1,4 +1,4 @@
-package cn.study.note.MultiThread;
+package cn.study.note.MultiThread.middle;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

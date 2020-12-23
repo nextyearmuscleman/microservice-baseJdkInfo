@@ -1,9 +1,8 @@
-package cn.study.note.MultiThread;
+package cn.study.note.MultiThread.middle;
 
 
 import org.junit.Test;
 
-import java.util.concurrent.locks.LockSupport;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
