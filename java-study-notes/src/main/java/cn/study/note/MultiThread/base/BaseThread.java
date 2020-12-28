@@ -42,12 +42,9 @@ public class BaseThread {
     // 3- implements Callable
     static void createThreadByImpleCallable() {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Future<Object> callbackRes = executorService.submit(new Callable<Object>() {
-            @Override
-            public Object call() throws Exception {
-                System.out.println("gen new Thread by implements Callable");
-                return "callback result";
-            }
+        Future<Object> callbackRes = executorService.submit(() -> {
+            System.out.println("gen new Thread by implements Callable");
+            return "callback result";
         });
         if (callbackRes.isDone()) {
             Object o = null;
@@ -66,12 +63,9 @@ public class BaseThread {
     // callable包装后交给FutureTask, 之后交由ExecutorService处理
     static void createThreadByFutureTask() throws ExecutionException, InterruptedException {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
-        FutureTask<Object> futureTask = new FutureTask<>(new Callable<Object>() {
-            @Override
-            public Object call() throws Exception {
-                Thread.sleep(300);
-                return "callable res";
-            }
+        FutureTask<Object> futureTask = new FutureTask<>(() -> {
+            Thread.sleep(300);
+            return "callable res";
         });
         executorService.submit(futureTask);
 
