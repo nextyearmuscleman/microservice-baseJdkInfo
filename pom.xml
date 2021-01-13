@@ -7,6 +7,12 @@
     <artifactId>microservice-basejdkinfo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.2.RELEASE</version>
+    </parent>
+
     <modules>
         <module>microservice-movie-provider</module>
         <module>microservice-movie-consumer</module>
@@ -18,6 +24,7 @@
         <module>microservice-gateway-zuul</module>
         <module>microservice-config</module>
         <module>java-study-notes</module>
+        <module>study-kafka</module>
     </modules>
 
 </project>
