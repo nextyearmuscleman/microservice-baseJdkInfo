@@ -1,5 +1,6 @@
-package cn.study.aboutKafka.producer;
+package cn.study.aboutKafka.producer.serializer;
 
+import cn.study.aboutKafka.producer.serializer.Customer;
 import lombok.Data;
 import org.apache.kafka.common.errors.SerializationException;
 import org.apache.kafka.common.serialization.Serializer;
@@ -59,14 +60,6 @@ public class AboutKafkaSerializer {
     }
 
 
-
-
-
-    @Data
-    static class Customer {
-        private int customerId;
-        private String name;
-    }
 }
 
 
