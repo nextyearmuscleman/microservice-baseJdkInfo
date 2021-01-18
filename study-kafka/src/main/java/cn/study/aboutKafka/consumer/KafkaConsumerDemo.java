@@ -13,25 +13,15 @@ import java.util.Optional;
 @Component
 public class KafkaConsumerDemo {
 
-    @KafkaListener(topics = {"testTopic"})
-    public void consumer1(ConsumerRecord<?,?> consumerRecord) {
-        //判断是否为null
-        Optional<?> kafkaMessage = Optional.ofNullable(consumerRecord.value());
-        if (kafkaMessage.isPresent()) {
-            //得到Optional实例中的值
-            Object message = kafkaMessage.get();
-            System.err.println("消费1消息:" + message);
-        }
-    }
+//    @KafkaListener(topics = {"testTopic"})
+//    public void consumer1(ConsumerRecord<?,?> consumerRecord) {
+//        //判断是否为null
+//        Optional<?> kafkaMessage = Optional.ofNullable(consumerRecord.value());
+//        if (kafkaMessage.isPresent()) {
+//            //得到Optional实例中的值
+//            Object message = kafkaMessage.get();
+//            System.err.println("消费1消息:" + message);
+//        }
+//    }
 
-    @KafkaListener(topics = {"testTopic"})
-    public void consumer2(ConsumerRecord<?,?> consumerRecord) {
-        //判断是否为null
-        Optional<?> kafkaMessage = Optional.ofNullable(consumerRecord.value());
-        if (kafkaMessage.isPresent()) {
-            //得到Optional实例中的值
-            Object message = kafkaMessage.get();
-            System.err.println("消费2消息:" + message);
-        }
-    }
 }
