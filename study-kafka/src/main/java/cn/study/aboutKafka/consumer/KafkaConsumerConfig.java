@@ -44,7 +44,7 @@ public class KafkaConsumerConfig {
      */
 
 
-    KafkaConsumer getConsumer() {
+    static KafkaConsumer getConsumer() {
         Properties props = new Properties();
         props.put("bootstrap.servers", "42.193.184.93:9092");
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
@@ -176,9 +176,7 @@ public class KafkaConsumerConfig {
     void singleConsumer() {
         KafkaConsumer consumer = getConsumer();
         List<PartitionInfo> topics = consumer.partitionsFor("testTopic");// 1- 向服务器获取topic可用的分区信息
-        List<TopicPartition> topicPartitions = topics.stream().map(topic -> {
-            return new TopicPartition(topic.topic(), topic.partition());
-        }).collect(Collectors.toList());
+        List<TopicPartition> topicPartitions = topics.stream().map(topic -> new TopicPartition(topic.topic(), topic.partition())).collect(Collectors.toList());
         consumer.assign(topicPartitions); // 2- 手动将分区列表分配给消费者
     }
 
