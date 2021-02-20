@@ -25,6 +25,7 @@
         <module>microservice-config</module>
         <module>java-study-notes</module>
         <module>study-kafka</module>
+        <module>study-lucene</module>
     </modules>
 
 </project>
